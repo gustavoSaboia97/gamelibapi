@@ -8,5 +8,5 @@ class AuthConfiguration:
         self.__token_uri = "/api/user/login/validate/"
 
     @property
-    def user_api_token_authenticator(self):
+    def user_api_token_authenticator(self) -> str:
         return self.__user_api + self.__token_uri

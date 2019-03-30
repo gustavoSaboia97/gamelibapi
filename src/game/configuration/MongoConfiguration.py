@@ -2,6 +2,8 @@ from pymongo import MongoClient
 
 import os
 
+from pymongo.database import Database
+
 
 class MongoConfiguration:
 
@@ -11,5 +13,5 @@ class MongoConfiguration:
         self.__database = self.__mongo_client.game_database
 
     @property
-    def database(self):
+    def database(self) -> Database:
         return self.__database
