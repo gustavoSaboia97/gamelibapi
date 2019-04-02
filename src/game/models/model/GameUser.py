@@ -1,4 +1,5 @@
 from src.game.models.model.Game import Game
+from pymongo.collection import ObjectId
 
 
 class GameUser:
@@ -29,7 +30,7 @@ class GameUser:
 
     def to_mongo_dict(self) -> dict:
         return {
-            "_id": self.__user_id,
+            "_id": ObjectId(self.__user_id),
             "login": self.__login,
             "games": self.__games
         }
