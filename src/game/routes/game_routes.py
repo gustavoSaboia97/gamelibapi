@@ -4,6 +4,11 @@ from flask import Blueprint
 game_blueprint = Blueprint("game_blueprint", __name__)
 
 
+@game_blueprint.route("/api/user/", methods=['POST', ])
+def new_game_user():
+    return "New Game User Route"
+
+
 @game_blueprint.route("/api/game/", methods=['POST', ])
 def new_game():
     return "New Game Route"
